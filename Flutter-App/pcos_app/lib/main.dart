@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'homepage.dart';
+import 'package:pcos_app/chat/chat_screen.dart';
+import 'package:pcos_app/login_screens/login_screen.dart';
+import 'package:pcos_app/login_screens/welcome_screen.dart';
+import 'package:pcos_app/login_screens/registration_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -12,8 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routes: {
         HomePage.id : (context) => HomePage(),
+        ChatScreen.id: (context) => ChatScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
       },
-      initialRoute: HomePage.id,
+      initialRoute: WelcomeScreen.id,
       theme: ThemeData(
 
         primarySwatch: Colors.blue,

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pcos_app/chat/chat_screen.dart';
 import 'package:pcos_app/widgets/AppDrawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +16,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   final widgetOptions = [
-    Text('Beer List'),
+    ChatScreen(),
     Text('Add new beer'),
     Text('Favourites'),
   ];
