@@ -54,7 +54,18 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
+  assets:
+    - assets/images/
+  fonts:
+    - family: Futura
+      fonts:
+        - asset: assets/fonts/futuramediumbt.ttf
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/Helvetica.ttf
+    - family: SegoeUI-Bold
+      fonts:
+        - asset: assets/fonts/segoe-ui-bold.ttf
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
