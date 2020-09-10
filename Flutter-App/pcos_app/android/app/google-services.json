@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "858244731434",
+    "firebase_url": "https://pcos-app-d5c40.firebaseio.com",
+    "project_id": "pcos-app-d5c40",
+    "storage_bucket": "pcos-app-d5c40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858244731434:android:29b58fb62f4c5487626953",
+        "android_client_info": {
+          "package_name": "com.example.pcos_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858244731434-q83mnejgqp8conokpru75jbb3h0o4qbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0JHRLlO3U3-2UC4nbKcicUKJ8qeA4aD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858244731434-q83mnejgqp8conokpru75jbb3h0o4qbc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
