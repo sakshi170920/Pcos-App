@@ -1,8 +1,7 @@
-//import 'package:flutter/material.dart';
-
+import 'package:pcos_app/features/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pcos_app/chat/chat_screen.dart';
+import 'package:pcos_app/features/health_insights.dart';
 import 'package:pcos_app/widgets/AppDrawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,7 +16,7 @@ class HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   final widgetOptions = [
     ChatScreen(),
-    Text('Add new beer'),
+    BlogSection(),
     Text('Favourites'),
   ];
 
@@ -25,7 +24,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter App'),
+        title: Text('PCOS Virago'),
       ),
       drawer: AppDrawer(),
       body: Center(

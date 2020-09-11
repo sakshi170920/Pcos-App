@@ -39,19 +39,6 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: null,
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(Icons.close),
-              onPressed: () {
-                _auth.signOut();
-                Navigator.pop(context);
-              }),
-        ],
-        title: Text('⚡️Chat'),
-        backgroundColor: Colors.lightBlueAccent,
-      ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,10 +63,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     child: FlatButton(
                       onPressed: () {
                         messageTextController.clear();
+
                         _firestore.collection('messages').add({
-                          'text': messageText,
+                          'text': messageText==null ? "" : messageText,
                           'sender': loggedInUser.email,
                         });
+                        messageText = "";
                       },
                       child: Text(
                         'Send',

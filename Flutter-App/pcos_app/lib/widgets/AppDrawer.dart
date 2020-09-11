@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pcos_app/homepage.dart';
+import 'package:pcos_app/login_screens/welcome_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -59,7 +62,7 @@ class AppDrawer extends StatelessWidget {
                 ),
                 DrawerListItem(icon: Icons.info_outline,title: "About Us", id : null,
                 ),
-                DrawerListItem(icon: Icons.exit_to_app,title: "Log Out", id : null,
+                DrawerListItem(icon: Icons.exit_to_app,title: "Log Out", id : WelcomeScreen.id,
                 ),
 
               ],
@@ -77,12 +80,24 @@ class DrawerListItem extends StatelessWidget {
   final IconData icon;
   final String id;
   final String title;
+  final _auth = FirebaseAuth.instance;
   DrawerListItem({@required this.icon, @required this.id, @required this.title});
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(icon,color: Colors.blue,),
-      title: Text(title),
+    return GestureDetector(
+      onTap: (){
+        if(id == WelcomeScreen.id) {
+          _auth.signOut();
+
+          Navigator.pushNamedAndRemoveUntil(
+              context, WelcomeScreen.id, (route) => false);
+        }
+        else Navigator.pushReplacementNamed(context, id);
+      },
+      child: ListTile(
+        leading: Icon(icon,color: Colors.blue,),
+        title: Text(title),
+      ),
     );
   }
 }

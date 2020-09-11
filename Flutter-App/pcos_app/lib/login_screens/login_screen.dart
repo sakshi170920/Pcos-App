@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pcos_app/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pcos_app/homepage.dart';
-import '../chat/chat_screen.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:pcos_app/widgets/rounded_button.dart';
 
@@ -78,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     final user = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);
                     if (user != null) {
-                      Navigator.pushNamed(context, HomePage.id);
+                      Navigator.pushNamedAndRemoveUntil(context, HomePage.id, (route) => false);
                     }
 
                     setState(() {
