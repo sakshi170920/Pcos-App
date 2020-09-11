@@ -51,6 +51,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Expanded(
+                    flex: 3,
                     child: TextField(
                       controller: messageTextController,
                       onChanged: (value) {
@@ -60,6 +61,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     ),
                   ),
                   Expanded(
+                    flex: 1,
                     child: FlatButton(
                       onPressed: () {
                         messageTextController.clear();

@@ -76,15 +76,32 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if (newUser != null) {
-                      Navigator.pushNamed(context, HomePage.id);
+                      Navigator.pushNamedAndRemoveUntil(context, HomePage.id,(route)=>false);
                     }
-
-                    setState(() {
-                      showSpinner = false;
-                    });
                   } catch (e) {
                     print(e);
+                    print("hello ");
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) =>
+                          AlertDialog(
+                            title: Text("Login Failed"),
+                            content: Text("Something went wrong.\n Try again."),
+                            actions: [
+                              FlatButton(
+                                onPressed: (){
+                                  Navigator.pop(context);
+                                },
+                                child: Text("Close"),
+                              ),
+                            ],
+
+                          ),
+                    );
                   }
+                  setState(() {
+                    showSpinner = false;
+                  });
                 },
               ),
             ],

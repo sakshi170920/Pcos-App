@@ -77,15 +77,33 @@ class _LoginScreenState extends State<LoginScreen> {
                     final user = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);
                     if (user != null) {
-                      Navigator.pushNamedAndRemoveUntil(context, HomePage.id, (route) => false);
+                      Navigator.pushNamedAndRemoveUntil(context, HomePage.id,(route)=>false);
                     }
 
-                    setState(() {
-                      showSpinner = false;
-                    });
+
                   } catch (e) {
                     print(e);
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) =>
+                          AlertDialog(
+                            title: Text("Login Failed"),
+                            content: Text("Your email and password did not match.\nTry again."),
+                            actions: [
+                              FlatButton(
+                                onPressed: (){
+                                  Navigator.pop(context);
+                                },
+                                child: Text("Close"),
+                              ),
+                            ],
+
+                          ),
+                    );
                   }
+                  setState(() {
+                    showSpinner = false;
+                  });
                 },
               ),
             ],
