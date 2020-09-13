@@ -16,4 +16,7 @@ educational chatbot which briefs us about PCOS
 7) Period Tracker & Ovulation Calendar  
 8) Fitness Tools & Daily Reports  
 
+UI of App :  
+![Signup Screens](https://github.com/sakshi170920/Pcos-App/blob/master/Images/pcos_1.jpg)
+![Features](https://github.com/sakshi170920/Pcos-App/blob/master/Images/pcos_2.jpg)
 # The unique features of our app help women with PCOS throughout their journey of reversing PCOS!  
