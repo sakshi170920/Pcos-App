@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pcos_app/Quiz/WeclcomePCOSQuiz.dart';
 import 'package:pcos_app/homepage.dart';
 import 'package:pcos_app/login_screens/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -58,7 +59,7 @@ class AppDrawer extends StatelessWidget {
               children: [
                 DrawerListItem(icon: Icons.home,title: "Home", id : HomePage.id,
                 ),
-                DrawerListItem(icon: Icons.assignment_ind , title: "PCOS Diagnosis", id: null,
+                DrawerListItem(icon: Icons.assignment_ind , title: "PCOS Diagnosis", id: WelcomePCOSQuiz.id,
                 ),
                 DrawerListItem(icon: Icons.person_outline , title: "PCOS Assistant", id: null,
                 ),

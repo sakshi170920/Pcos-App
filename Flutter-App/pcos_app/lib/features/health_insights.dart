@@ -3,8 +3,9 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pcos_app/features/blog.dart';
 class BlogSection extends StatelessWidget {
-  final titles = ["Cycle Phases and Periods","Reproductive Health and Care","Balanced Nutrition for Female Health","Finding your Harmony"];
+  final titles = ["Cycle Phases and Periods","Reproductive Health and Care","Why Sleep matters for Female Health","Finding your Harmony"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +52,12 @@ class BlogSection extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                         ),
-                        child: Image(image: AssetImage("assets/images/pcos${index+1}.jpg"),
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context,SleepBlog.id);
+                          },
+                          child: Image(image: AssetImage("assets/images/pcos${index+1}.jpg"),
+                          ),
                         ),
                       );
                       },

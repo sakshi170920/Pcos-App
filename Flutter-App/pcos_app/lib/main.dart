@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pcos_app/Quiz/MainQuiz.dart';
+import 'package:pcos_app/Quiz/WeclcomePCOSQuiz.dart';
+import 'package:pcos_app/features/blog.dart';
 import 'homepage.dart';
 import 'package:pcos_app/features/chat_screen.dart';
 import 'package:pcos_app/login_screens/login_screen.dart';
@@ -10,10 +13,7 @@ void main() async {
   final _auth = FirebaseAuth.instance;
   final user = await _auth.currentUser();
   final String initialRoute = (user == null) ? WelcomeScreen.id : HomePage.id;
-  if(user==null)
-    print("no user");
-  else
-    print(user.toString());
+
 
 
   runApp(MyApp(initialRoute: initialRoute,));
@@ -34,6 +34,9 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         WelcomeScreen.id: (context) => WelcomeScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
+        WelcomePCOSQuiz.id : (context) => WelcomePCOSQuiz(),
+        MainQuiz.id :  (context) => MainQuiz(),
+        SleepBlog.id : (context) => SleepBlog(),
       },
       initialRoute: initialRoute,
       theme: ThemeData(

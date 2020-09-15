@@ -17,7 +17,7 @@ class HomePageState extends State<HomePage> {
   final widgetOptions = [
     BlogSection(),
     ChatScreen(),
-    Text('Favourites'),
+    Text('This feature is coming soon !',style: TextStyle(fontSize: 20),),
   ];
 
   @override
