@@ -58,7 +58,11 @@ class AppDrawer extends StatelessWidget {
               children: [
                 DrawerListItem(icon: Icons.home,title: "Home", id : HomePage.id,
                 ),
-                DrawerListItem(icon: Icons.assignment_ind , title: "Health Profile", id: null,
+                DrawerListItem(icon: Icons.assignment_ind , title: "PCOS Diagnosis", id: null,
+                ),
+                DrawerListItem(icon: Icons.person_outline , title: "PCOS Assistant", id: null,
+                ),
+                DrawerListItem(icon: Icons.list , title: "PCOS Tracking and Ovulation", id: null,
                 ),
                 DrawerListItem(icon: Icons.info_outline,title: "About Us", id : null,
                 ),

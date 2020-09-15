@@ -15,8 +15,8 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   final widgetOptions = [
-    ChatScreen(),
     BlogSection(),
+    ChatScreen(),
     Text('Favourites'),
   ];
 
@@ -32,9 +32,9 @@ class HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.people), title: Text('Community')),
           BottomNavigationBarItem(
               icon: Icon(Icons.lightbulb_outline), title: Text('Health Insights')),
+          BottomNavigationBarItem(icon: Icon(Icons.people), title: Text('Virago Community')),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), title: Text('Expert Team')),
         ],

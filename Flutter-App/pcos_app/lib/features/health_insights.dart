@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 class BlogSection extends StatelessWidget {
-  final titles = ["Periods","Nutrition","Health","Yoga and Exercise "];
+  final titles = ["Cycle Phases and Periods","Reproductive Health and Care","Balanced Nutrition for Female Health","Finding your Harmony"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
